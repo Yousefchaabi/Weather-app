@@ -17,13 +17,11 @@ import Moment from 'react-moment';
 function Weather() {
 
     const weather = useSelector(({weather}) => weather)
-    console.log(weather)
     const defaultWidth = '200px';
     const defaultHight = '200px';
 
     const displayIcon = () => {
         const number = weather.weather.icon.substring(0, 2);
-        console.log(weather.weather.icon)
         switch(number) {
             case '01': return <Rainy width={defaultWidth} height={defaultHight}/>
             case '02': 
